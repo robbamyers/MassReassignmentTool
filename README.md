@@ -1,18 +1,10 @@
-# Salesforce DX Project: Next Steps
+# Mass Reassignment Tool Notes
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Frequently, Litify admins need to reassign large amounts of cases from one user to the next. Out-of-the-box Salesforce automation tools can rarely accomplsih this without running into CPU timeout or iteration limits in Flow. Apex, however, can handle these types of request with ease. Mass Reassignment Tool leverages Salesforce's LWC and Apex's batchable interface to present Litify admin's with a friendly user interface.
 
-## How Do You Plan to Deploy Your Changes?
+- **IMPORTANT**: In order for the "and Lookups" functionality to work properly, you will need to add the User lookup fields as Custom Metadata Type records. Every org will have differently lookups they want to update so the custom metadata type holds this information for your specific org. Please also note, that the lookups will only update IF the current user is any of the fields defined in custom metadata.
+# Installation Link
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Sandbox: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tDS000000AQWh&isdtp=p1
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
