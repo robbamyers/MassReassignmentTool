@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-box slds-p-top_small" style="background-color: white;">
+        <label for="current-user">Current User</label>
+        <lightning-record-edit-form object-api-name="litify_pm__Matter__c" id="current-user">
+            <lightning-input-field field-name="litify_pm__Principal_Attorney__c" data-id="current-user" variant="label-hidden" onchange={handleAccountSelection} required> </lightning-input-field>
+        </lightning-record-edit-form>
+        <label for="current-user">New User</label>
+        <lightning-record-edit-form object-api-name="litify_pm__Matter__c" id="new-user">
+            <lightning-input-field field-name="litify_pm__Principal_Attorney__c" data-id="new-user" variant="label-hidden" onchange={handleAccountSelection} required> </lightning-input-field>
+        </lightning-record-edit-form>
+        <lightning-radio-group name="updateType" label="Update Type" options={options} value={updateTypeValue} onchange={handleRadioSelection} type="radio" required>
+        </lightning-radio-group>
+        <div class="slds-card slds-p-around_medium">
+                <lightning-formatted-text value={displayText} style="font-weight: bold;text-align: center;"></lightning-formatted-text>
+        </div>
+        <div class="slds-card slds-p-around_medium">
+                <lightning-progress-bar value={progressBarValue} size="large" variant="circular"></lightning-progress-bar>
+        </div>
+        <div class="slds-text-align_right slds-p-top_medium">
+            <lightning-button  label="Update" if:true={showButton} onclick={handleUpdate}></lightning-button>
+        </div>
+        <div>
+            <lightning-button label="Reset" if:true={showReset} onclick={handleReset}></lightning-button>
+        </div>
+
+    </div>
+</template>
