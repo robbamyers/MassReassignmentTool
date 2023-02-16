@@ -7,4 +7,4 @@ Frequently, Litify admins need to reassign large amounts of cases from one user 
 
 Sandbox: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tDS000000AQWh&isdtp=p1
 
-
+## Disclaimer: This is an unofficial Litify tool that was created as a side project. This code is not endorsed by Litify nor is it an official product. Use of this code should be done at the user's own risk. Additionally, this tool should be tested throughly in a Salesforce Sandbox before deploying to production.
